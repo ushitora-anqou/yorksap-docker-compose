@@ -1,0 +1,18 @@
+services:
+  yorksap:
+    build: "./yorksap"
+    volumes:
+      - ./yorksap-mnt:/mnt
+    environment:
+      - BIND=0.0.0.0:8080
+      - DSN=sqlite3:///mnt/yorksap.sqlite3
+
+  yorksap-frontend-wip3:
+    build: "./yorksap-frontend-wip3"
+
+  gateway:
+    image: nginx:1.25.3
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - 8080:8080

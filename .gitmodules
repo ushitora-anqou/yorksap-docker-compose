@@ -1,3 +1,6 @@
 [submodule "yorksap-frontend-wip3"]
 	path = yorksap-frontend-wip3
 	url = https://github.com/uta8a/yorksap-frontend-wip3.git
+[submodule "yorksap"]
+	path = yorksap
+	url = https://github.com/ushitora-anqou/yorksap.git
